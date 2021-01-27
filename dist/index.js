@@ -306,7 +306,7 @@ if (fs.existsSync(vercelConfigPath)) {
 
   let vercelEnvVar = null;
   if (isMainBranch) {
-    vercelEnvVar = 'production';
+    vercelEnvVar = 'prod';
   } else if (isTestingBranch) {
     vercelEnvVar = 'testing';
   }
@@ -328,7 +328,7 @@ const claudiaTestingConfigPath = fs.existsSync(path.join(buildBasePath, './claud
 const claudiaProdConfigPath = fs.existsSync(path.join(buildBasePath, './claudia_prod.json'));
 
 if (isMainBranch && claudiaProdConfigPath) {
-  core.info(' - Setting Claudia to production deployment');
+  core.info(' - Setting Claudia to prod deployment');
   core.exportVariable('BN_CLAUDIA_DEPLOYMENT', 'prod');
 } else if (isTestingBranch && claudiaTestingConfigPath) {
   core.info(' - Setting Claudia to testing deployment');
