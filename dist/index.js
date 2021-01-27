@@ -235,7 +235,7 @@ const { context } = github;
 const buildId = context.runId;
 const buildHash = context.sha;
 const buildApp = `${context.repo.owner}/${context.repo.repo}`;
-const buildBasePath = buildBasePath;
+const buildBasePath = process.env.GITHUB_WORKSPACE;
 
 core.info('Getting commit info:');
 core.info(` - App name: ${buildApp}`);
