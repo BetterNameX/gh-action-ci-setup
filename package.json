@@ -1,0 +1,18 @@
+{
+  "name": "@betternamex/gh-action-ci-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  },
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  }
+}
