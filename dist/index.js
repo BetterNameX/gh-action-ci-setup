@@ -260,7 +260,7 @@ const isTestingBranch = (branchName === 'testing');
 //
 core.info('Evaluating branch:');
 
-core.info(' - Branch name: ', branchName);
+core.info(` - Branch name: ${branchName}`);
 core.exportVariable('BN_BUILD_BRANCH_NAME', branchName);
 
 if (isMainBranch) {
